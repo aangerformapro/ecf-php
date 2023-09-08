@@ -10,6 +10,9 @@ abstract class BaseModel
 
     abstract public function __unserialize(array $data): void;
 
+    abstract public function __serialize(): array;
+
+
     public function getId(): ?int
     {
         return $this->id;
