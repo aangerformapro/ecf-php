@@ -11,7 +11,7 @@ if ( ! isset($_SESSION['user']))
     exit;
 }
 
-$user  = User::findOne('id = ?', [$_SESSION['user']]);
+$user  = unserialize($_SESSION['user']);
 
 
 

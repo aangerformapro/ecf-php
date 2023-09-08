@@ -9,7 +9,7 @@ if (isset($_POST['email'], $_POST['password']))
 {
     if ($user = User::connectUser($_POST['email'], $_POST['password']))
     {
-        $_SESSION['user'] = $user->getId();
+        $_SESSION['user'] = serialize($user);
     }
 }
 

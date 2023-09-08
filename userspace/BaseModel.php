@@ -97,8 +97,6 @@ abstract class BaseModel
                 implode(', ', array_keys($props))
             );
 
-            var_dump($query);
-
             try
             {
                 if (getPDO()->prepare($query)->execute($data))

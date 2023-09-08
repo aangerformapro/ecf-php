@@ -16,7 +16,7 @@ if (isset($_POST['email'], $_POST['password'], $_POST['name']))
         ])
     ) {
 
-        $_SESSION['user'] = $user->getId();
+        $_SESSION['user'] = serialize($user);
         header('Location: ./');
 
         exit;
